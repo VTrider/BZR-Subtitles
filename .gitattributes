@@ -1,0 +1,3 @@
+external/** linguist-vendored
+include/** linguist-vendored
+src/font.h linguist-vendored
