@@ -117,8 +117,12 @@
   <ItemGroup>
     <ClInclude Include="external\dx9hook.h" />
     <ClInclude Include="external\gui.h" />
+    <ClInclude Include="resource\resource.h" />
     <ClInclude Include="src\font.h" />
     <ClInclude Include="src\subtitles.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource\subtitles.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
