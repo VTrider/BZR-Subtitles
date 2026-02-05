@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Lua5.1-BZR/Lua5.1-BZR.vcxproj" Id="5b18ac9a-bf31-4401-b45d-61c1a2b0dc67" />
+  <Project Path="subtitles.vcxproj" Id="94b33082-74a5-44b8-92f3-86e5e46f13fb" />
+</Solution>
