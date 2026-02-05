@@ -23,3 +23,8 @@ function subtitles.set_opaacity(opacity) end
 
 --- Clears the render queue
 function subtitles.clear_queue() end
+
+--- Clears the current subtitle from the screen.
+--- call clear_queue() first if you want to ensure
+--- nothing is displayed afterwards
+function subtitles.clear_current() end
