@@ -49,12 +49,19 @@ namespace subtitles
 		return 0;
 	}
 
+	int clear_current([[maybe_unused]] lua_State* L)
+	{
+		request_clear.store(true, std::memory_order_relaxed);
+		return 0;
+	}
+
 	extern "C" int __declspec(dllexport) luaopen_subtitles(lua_State* L)
 	{
 		constexpr luaL_Reg export_lib[] = {
 			EXPORT(submit)
 			EXPORT(set_opacity)
 			EXPORT(clear_queue)
+			EXPORT(clear_current)
 			{ 0, 0 }
 		};
 		luaL_register(L, "subtitles", export_lib);

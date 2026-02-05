@@ -2,6 +2,7 @@
 
 #include <imgui.h>
 
+#include <atomic>
 #include <chrono>
 #include <mutex>
 #include <queue>
@@ -24,4 +25,5 @@ namespace subtitles
 
 	inline std::mutex mtx{};
 	inline std::queue<subtitle_request> request_queue;
+	inline std::atomic<bool> request_clear = false;
 };

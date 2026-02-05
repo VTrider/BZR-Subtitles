@@ -14,6 +14,12 @@ std::optional<subtitles::subtitle_request> current_subtitle = std::nullopt;
 
 void gui::UserGui() noexcept
 {
+	if (subtitles::request_clear.load(std::memory_order_relaxed) == true)
+	{
+		current_subtitle = std::nullopt;
+		subtitles::request_clear.store(false, std::memory_order_relaxed);
+	}
+
 	if (!current_subtitle)
 	{
 		std::lock_guard lock(subtitles::mtx);
